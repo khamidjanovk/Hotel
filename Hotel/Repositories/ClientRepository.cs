@@ -50,7 +50,7 @@ namespace Hotel.Repositories
             var clients = GetAll().Where(p => p.FirstName.ToLower().Contains(text.ToLower()) || 
                                               p.LastName.ToLower().Contains(text.ToLower()) ||
                                               p.Country.ToLower().Contains(text.ToLower()) ||
-                                              p.RoomNumber.Contains(text));
+                                              p.RoomNumber.Contains(text) || p.PhoneNumber.Contains(text));
 
             return clients.ToList();  
         }
